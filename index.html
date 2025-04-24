@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,22 +35,52 @@
       top: 10px;
       right: 20px;
       z-index: 999;
-      background: #f5f5f5;
+      background: transparent;
       border: none;
-      padding: 0.5rem 1rem;
-      font-size: 14px;
+      padding: 0.5rem;
       cursor: pointer;
     }
-    .dark-mode .toggle-button {
-      background: #333;
-      color: #eee;
+
+    .icon-wrapper {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
     }
+
+    .mode-icon {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+    }
+
+    .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: #fff;
+      border-radius: 50% 0 0 50%;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    .dark-mode .cover {
+      left: 50%;
+      background-color: #121212;
+      border-radius: 0 50% 50% 0;
+    }
+
     .hero-line {
       text-align: center;
       font-size: 1.75rem;
       font-weight: normal;
       margin-bottom: 3rem;
     }
+
     .dynamic-word {
       font-weight: bold;
     }
@@ -59,21 +88,27 @@
 </head>
 <body>
 
-  <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <!-- Theme toggle button -->
+  <button class="toggle-button" onclick="toggleDarkMode()">
+    <div class="icon-wrapper">
+      <img src="moon-sun-icon.png" alt="Theme toggle" class="mode-icon">
+      <div class="cover" id="cover-overlay"></div>
+    </div>
+  </button>
 
-  <!-- Custom hero line -->
+  <!-- Hero section -->
   <section class="hero-line">
-    Hi, I’m Zohreh Asadi <br/>
+    Hi, I’m Zohreh <br/>
     <span class="dynamic-word" id="rotating-word" style="color:#facc15;">a clean coder</span><br/>
-    But mostly <strong>LEARNER</strong>
+    But mostly <strong>A LEARNER</strong>
   </section>
 
   <script>
     const words = [
-      { text: "a clean coder", color: "#facc15" },     // yellow
-      { text: "a data analyst", color: "#f472b6" },     // pink
-      { text: "a problem solver", color: "#86efac" },   // light green
-      { text: "a tech enthusiast", color: "#93c5fd" }   // light blue
+      { text: "a clean coder", color: "#facc15" },
+      { text: "a data analyst", color: "#f472b6" },
+      { text: "a problem solver", color: "#86efac" },
+      { text: "a tech enthusiast", color: "#93c5fd" }
     ];
     let i = 0;
     const el = document.getElementById("rotating-word");
@@ -89,38 +124,30 @@
     }
   </script>
 
+  <!-- Main content -->
   <div class="container content">
     <h1 class="title">Zohreh Asadi</h1>
-    <p>I'm a Computer Science graduate based in Berlin, passionate about process automation, data analysis, and clean interfaces. I love turning complex problems into simple, elegant solutions using Python, R, and web technologies.</p>
+    <p>I'm a Computer Science graduate based in Berlin, passionate about process automation, data analysis, and clean interfaces...</p>
 
     <h2 class="subtitle">Projects</h2>
     <ul>
-      <li>
-        <a href="https://github.com/zohrehasadi00/pdf2json" target="_blank">PDF2JSON – Thesis Project</a> — NLP and OCR pipeline to automate PDF processing for efficient data extraction and management.
-      </li>
+      <li><a href="https://github.com/zohrehasadi00/pdf2json" target="_blank">PDF2JSON – Thesis Project</a> — NLP and OCR pipeline...</li>
     </ul>
 
     <h2 class="subtitle">Experience</h2>
     <ul>
-      <li><strong>Siemens Energy, Berlin</strong> — Digitalization & Automation (Oct 2023 – Dec 2024)<br/>
-      Automated manual processes, built user-friendly interfaces, optimized SAP workflows, and proposed programming-based improvements.</li>
-
-      <li><strong>CAU University, Kiel</strong> — Data & Admin Assistant (Oct 2021 – Sep 2022)<br/>
-      Supported the Altissia project, prepared reports, and coordinated data organization tasks.</li>
-
-      <li><strong>CAU University, Kiel</strong> — Data Analysis Intern (Feb 2019 – May 2019)<br/>
-      Managed and analyzed data using R and Excel.</li>
+      <li><strong>Siemens Energy, Berlin</strong> — Digitalization & Automation...</li>
+      <li><strong>CAU University, Kiel</strong> — Data & Admin Assistant...</li>
+      <li><strong>CAU University, Kiel</strong> — Data Analysis Intern...</li>
     </ul>
 
     <h2 class="subtitle">Skills</h2>
-    <p>
-      Python, R, JavaScript, SQL, React, Firebase, Git, Docker, NLP, OCR, SAP, Jira, Scrum, Microservices, IoT, Data Visualization, Problem-solving, Communication
-    </p>
+    <p>Python, R, JavaScript, SQL, React, Firebase, Git, Docker, NLP, OCR...</p>
 
     <h2 class="subtitle">Education</h2>
     <ul>
-      <li><strong>Technische Universität Berlin</strong> — M.Sc. Computer Science (April 2025 – Present)</li>
-      <li><strong>Freie Universität Berlin</strong> — B.Sc. Computer Science (Oct 2021 – Mar 2025)</li>
+      <li><strong>Technische Universität Berlin</strong> — M.Sc. Computer Science...</li>
+      <li><strong>Freie Universität Berlin</strong> — B.Sc. Computer Science...</li>
     </ul>
 
     <h2 class="subtitle">Languages</h2>
@@ -133,5 +160,6 @@
       🐙 <a href="https://github.com/zohrehasadi00" target="_blank">github.com/zohrehasadi00</a>
     </p>
   </div>
+
 </body>
 </html>
