@@ -30,6 +30,7 @@
       background: #121212;
       color: #eee;
     }
+
     .toggle-button {
       position: fixed;
       top: 10px;
@@ -60,18 +61,17 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 50%;
+      width: 100%;
       height: 100%;
       background-color: #fff;
-      border-radius: 50% 0 0 50%;
+      clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
       transition: all 0.3s ease;
       z-index: 1;
     }
 
     .dark-mode .cover {
-      left: 50%;
       background-color: #121212;
-      border-radius: 0 50% 50% 0;
+      clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
     }
 
     .hero-line {
