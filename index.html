@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zohre Hasadi - ML Engineer & Computer Scientist</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="bg-animated"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">ZH</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b4e2f7b5?w=400&h=400&fit=crop&crop=face" alt="Zohre Hasadi" class=assets/images/profile.jpg>
+            <h1>Zohre Hasadi</h1>
+            <div class="subtitle">ML Engineer & Computer Scientist</div>
+            <p>
+                I am a Computer Science Master's student with a deep interest in machine learning.
+                Coding is my greatest interest and a skill I continuously strive to master. I thrive on
+                understanding how intelligent systems work and exploring ways to improve them through
+                innovative, data-driven approaches.
+            </p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="scroll-reveal">
+        <h2 class="section-title">Education</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="education-content">
+                    <div class="edu-icon">🎓</div>
+                    <div class="edu-details">
+                        <h3>Master of Science in Computer Science</h3>
+                        <p>Technical University Berlin</p>
+                    </div>
+                    <div class="edu-year">2025-2027</div>
+                </div>
+            </div>
+            <div class="education-card">
+                <div class="education-content">
+                    <div class="edu-icon">📚</div>
+                    <div class="edu-details">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <p>Freie Universität Berlin</p>
+                    </div>
+                    <div class="edu-year">2021-2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="scroll-reveal">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="exp-icon">⚡</div>
+                <h3>Siemens</h3>
+                <p>Software Engineering Intern</p>
+            </div>
+            <div class="experience-card">
+                <div class="exp-icon">📖</div>
+                <h3>DaF Institute</h3>
+                <p>Language Teaching Assistant</p>
+            </div>
+            <div class="experience-card">
+                <div class="exp-icon">💧</div>
+                <h3>Hydrology Research</h3>
+                <p>Data Analysis Assistant</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="scroll-reveal">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>dedup() Builtin</h3>
+                <p>Custom deduplication algorithm implementation with optimized performance for large datasets.</p>
+            </div>
+            <div class="project-card">
+                <h3>Guardian</h3>
+                <p>Security monitoring system using machine learning for anomaly detection.</p>
+            </div>
+            <div class="project-card">
+                <h3>Engineering Data Analytics</h3>
+                <p>Comprehensive data analysis platform for engineering metrics and KPIs.</p>
+            </div>
+            <div class="project-card">
+                <h3>Chart-to-Data Extractor</h3>
+                <p>AI-powered tool to extract structured data from chart images using computer vision.</p>
+            </div>
+            <div class="project-card">
+                <h3>pdf2json</h3>
+                <p>Efficient PDF parsing library for structured data extraction and processing.</p>
+            </div>
+            <div class="project-card">
+                <h3>Balance</h3>
+                <p>Personal finance management application with intelligent categorization.</p>
+            </div>
+            <div class="project-card">
+                <h3>Pong Game</h3>
+                <p>Classic Pong game implementation with modern graphics and AI opponent.</p>
+            </div>
+            <div class="project-card">
+                <h3>Guessing Game</h3>
+                <p>Interactive number guessing game with machine learning difficulty adjustment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact scroll-reveal">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                    <h4>Email</h4>
+                    <p>zohrehasadi2018@yahoo.com</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">💼</div>
+                <div>
+                    <h4>LinkedIn</h4>
+                    <p>/in/zohrehasadi</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">🐙</div>
+                <div>
+                    <h4>GitHub</h4>
+                    <p>@zohrehasadi00</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                    <h4>Location</h4>
+                    <p>Berlin, Germany</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('.project-card, .experience-card, .education-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Typing effect for subtitle
+        const subtitle = document.querySelector('.subtitle');
+        const text = subtitle.textContent;
+        subtitle.textContent = '';
+
+        let i = 0;
+        const typeWriter = () => {
+            if (i < text.length) {
+                subtitle.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        };
+
+        setTimeout(typeWriter, 1000);
+    </script>
+</body>
+</html>
