@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zohre Hasadi - ML Engineer & Computer Scientist</title>
+    <title>Zohreh Asadi - ML Engineer & Computer Scientist</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -65,28 +65,62 @@
             </div>
         </div>
     </section>
+<!-- Experience Section -->
+<section id="experience" class="scroll-reveal">
+  <h2 class="section-title">Experience</h2>
+  <div class="experience-grid">
+    <div class="experience-card" data-desc="desc1">
+      <img src="assets/images/se.jpg" alt="Siemens Energy Logo" style="width: 100px; height: 90px;">
+      <h3>Siemens Energy</h3>
+      <p>Digitalization and Automation of Processes</p>
+    </div>
+    <div class="experience-card" data-desc="desc2">
+      <img src="assets/images/CAU.png" alt="CAU Logo" style="width: 80px; height: 80px;">
+      <h3>CAU-DaF Institute</h3>
+      <p>Data and Administrative Assistant</p>
+    </div>
+    <div class="experience-card" data-desc="desc3">
+      <img src="assets/images/CAU.png" alt="CAU Logo" style="width: 80px; height: 80px;">
+      <h3>CAU-Hydrology Department</h3>
+      <p>Data Management and Analysis Assistant</p>
+    </div>
+  </div>
 
-    <!-- Experience Section -->
-    <section id="experience" class="scroll-reveal">
-        <h2 class="section-title">Experience</h2>
-        <div class="experience-grid">
-            <div class="experience-card">
-                <img src="assets/images/se.jpg" alt="Siemens Energy Logo" style="width: 100px; height: 90px;">
-                <h3>Siemens Energy</h3>
-                <p>Digitalization and Automation of Processes</p>
-            </div>
-            <div class="experience-card">
-                <img src="assets/images/CAU.png" alt="CAU Logo" style="width: 80px; height: 80px;">
-                <h3>CAU-DaF Institute</h3>
-                <p>Data and Administrative Assistant</p>
-            </div>
-            <div class="experience-card">
-                <img src="assets/images/CAU.png" alt="CAU Logo" style="width: 80px; height: 80px;">
-                <h3>CAU-Hydrology Department</h3>
-                <p>Data Management and Analysis Assistant</p>
-            </div>
-        </div>
-    </section>
+  <!-- Hidden descriptions container -->
+  <div class="experience-descriptions">
+    <p id="desc1" class="exp-description">
+  <span class="year"><strong>10.2023 - 12.2024</strong></span><br><br>
+  <span class="description">
+      As a digitalization specialist, I focused on transforming manual processes into automated, efficient workflows that significantly enhanced operational productivity.<br><br>
+        - Developed robust automated solutions using Python and VBA, dramatically reducing manual workload and improving accuracy across multiple departments.<br>
+        - Designed and implemented intuitive user-friendly interfaces that simplified complex internal workflows, making advanced tools accessible to non-technical team members.<br>
+        - Restructured large datasets in Excel, enhancing data accessibility and organizational efficiency.<br>
+        - Actively participated in internal meetings and coordinated application deployment processes.<br>
+  </span><br><br>
+  <strong>Tools:</strong> SAP, Python (pandas), VBA, Excel
+</p>
+
+    <p id="desc2" class="exp-description">
+  <span class="year"><strong>10.2021-09.2022</strong></span><br><br>
+  <span class="description">
+    Contributed to academic research and administrative excellence through meticulous data management and analytical support in a dynamic university environment.<br><br>
+      - Executed comprehensive data cleaning and analysis procedures for critical university research initiatives and administrative operations.<br>
+      - Created detailed internal reports and professional presentations, including specialized work for the innovative Altissia language learning project.<br>
+      - Provided strategic assistance with project planning coordination and facilitated productive internal meetings<br>
+  </span><br><br>
+  <strong>Tools:</strong> VBA, Excel, Altissia
+</p>
+   <p id="desc3" class="exp-description">
+  <span class="year"><strong>02.2019-05.2019</strong></span><br><br>
+  <span class="description">
+     Applied analytical expertise to environmental research, contributing to important hydrological studies through advanced data visualization and statistical analysis.<br><br>
+        - Collected, processed, and analyzed complex hydrological datasets using Excel for groundbreaking research projects.<br>
+        - Created sophisticated data visualizations using R, leveraging powerful libraries including ggplot2, plotly, and shiny to develop dynamic dashboards and conduct exploratory analysis.<br>
+  </span><br><br>
+  <strong>Tools:</strong> R, Excel
+</p>
+  </div>
+</section>
 
     <!-- Projects Section -->
     <section id="projects" class="scroll-reveal">
@@ -225,5 +259,29 @@
 
         setTimeout(typeWriter, 1000);
     </script>
+
+<script>
+  const cards = document.querySelectorAll('.experience-card');
+  const descriptions = document.querySelectorAll('.exp-description');
+
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const descId = card.getAttribute('data-desc');
+
+      descriptions.forEach(desc => {
+        if (desc.id === descId) {
+          desc.classList.add('active');
+        } else {
+          desc.classList.remove('active');
+        }
+      });
+    });
+
+    card.addEventListener('mouseleave', () => {
+      descriptions.forEach(desc => desc.classList.remove('active'));
+    });
+  });
+</script>
+
 </body>
 </html>
